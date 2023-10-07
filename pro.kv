@@ -1,0 +1,217 @@
+Mainscr:
+    Scr2:    
+    Scr3:
+    Scr4:
+    Pr1:
+    Pr2:
+    Pr3:
+    Pr4:
+    Pr5:
+    Pr6:
+<Scr2>:
+    name:"main"
+    GridLayout:
+        cols:1
+        GridLayout:
+            rows:4
+            Image:
+                source:'aa.jpg'
+            Label:
+                text:'Learn Python'
+                size_hint: (0.1,0.3)
+                font_size: 22
+            Label:
+                text:'Please Enter password'
+                size_hint:(0.1,0.3)
+            TextInput:
+                id:passw
+                size_hint:(.1,.1)
+                multiline:False 
+                password: True
+                
+        Button:
+            text:'LOGIN' 
+            size_hint:(.1,.1)   
+            on_release: 
+                app.root.current="second" if passw.text=="mohamed" else "Error"
+                root.manager.transition.direction="up"
+
+<Scr3>:
+    name:"second"
+    GridLayout:
+        cols:1
+        GridLayout:
+            rows:2
+            Image:
+                source:'bb.JPG'
+            Label:
+                text:"Welcome App"
+        GridLayout:
+            cols:2
+            rows:3
+            Button:
+                text:'php'
+                size_hint:(0.1,0.1)    
+                on_release:
+                    app.root.current="php" 
+                    root.manager.transition.direction="up"
+            Button:
+                text:'Python'
+                size_hint:(0.1,0.1)  
+                on_release:
+                    app.root.current="python" 
+                    root.manager.transition.direction="down"
+            Button:
+                text:'C++'
+                size_hint:(0.1,0.1)
+                on_release:
+                    app.root.current="c++" 
+                    root.manager.transition.direction="down"
+            Button:
+                text:'C#'
+                size_hint:(0.1,0.1)
+                on_release:
+                    app.root.current="c#" 
+                    root.manager.transition.direction="down"
+            Button:
+                text:'java'
+                size_hint:(0.1,0.1)
+                on_release:
+                    app.root.current="java" 
+                    root.manager.transition.direction="down"
+            Button:
+                text:'Kotlin'
+                font_size:18
+                size_hint:(0.1,0.1) 
+                color: (1,0,0,1)  
+                background_color:(0,1,0,1)     
+                on_release:
+                    app.root.current="kotlin" 
+                    root.manager.transition.direction="down"                
+        Button:
+            text:"Home"    
+            size_hint:(.1,.1)
+            on_release:
+                app.root.current="main"
+                root.manager.transition.direction="up"
+
+<Scr4>:
+    name:"Error"
+    GridLayout:
+        cols:1
+        GridLayout:
+            rows:3
+            Image:
+                source:'error.png'
+            Label:
+                text:'Please Enter correct password'   
+                font_size:22 
+            Button:
+                text:'Home'      
+                size_hint:(.1,.2)  
+                on_release:
+                    app.root.current="main"   
+                    root.manager.transition.direction="down" 
+
+<Pr1>:
+    name:"php"
+    GridLayout:
+        cols:1
+        GridLayout:
+            rows:2
+            Image:
+                source:'img/php.jpg'
+            Label:
+                text:'welcome'
+        
+    Button:
+        text:'GOBACK' 
+        size_hint:(1,0.1)   
+        on_release:
+            app.root.current="second"
+
+<Pr2>:
+    name:"python"
+    GridLayout:
+        cols:1
+        GridLayout:
+            rows:2
+            Image:
+                source:'img/python.jpg'
+            Label:
+                text:'Learn python'
+        
+    Button:
+        text:'GOBACK' 
+        size_hint:(1,0.1)   
+        on_release:
+            app.root.current="second"
+
+<Pr3>:
+    name:"kotlin"
+    GridLayout:
+        cols:1
+        GridLayout:
+            rows:2
+            Image:
+                source:'img/kotlin.png'
+            Label:
+                text:'Learn Kotlin'
+        
+    Button:
+        text:'GOBACK' 
+        size_hint:(1,0.1)   
+        on_release:
+            app.root.current="second"
+
+<Pr4>:
+    name:"c++"
+    GridLayout:
+        cols:1
+        GridLayout:
+            rows:2
+            Image:
+                source:'img/c++.jpg'
+            Label:
+                text:'Learn C++'
+        
+    Button:
+        text:'GOBACK' 
+        size_hint:(1,0.1)   
+        on_release:
+            app.root.current="second"
+
+<Pr5>:
+    name:"c#"
+    GridLayout:
+        cols:1
+        GridLayout:
+            rows:2
+            Image:
+                source:'img/c#.jpg'
+            Label:
+                text:'Learn c#'
+        
+    Button:
+        text:'GOBACK' 
+        size_hint:(1,0.1)   
+        on_release:
+            app.root.current="second"
+
+<Pr6>:
+    name:"java"
+    GridLayout:
+        cols:1
+        GridLayout:
+            rows:2
+            Image:
+                source:'img/java.png'
+            Label:
+                text:'Learn Java'
+        
+    Button:
+        text:'GOBACK' 
+        size_hint:(1,0.1)   
+        on_release:
+            app.root.current="second"                          
+                         
